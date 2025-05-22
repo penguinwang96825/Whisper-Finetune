@@ -71,7 +71,7 @@ def main():
                                  num_workers=args.num_workers, collate_fn=data_collator)
 
     # 获取评估方法
-    metric = evaluate.load(f'metrics/{args.metric}.py')
+    metric = evaluate.load(f'evaluate-metric/{args.metric}')
 
     # 开始评估
     for step, batch in enumerate(tqdm(eval_dataloader)):
